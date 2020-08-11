@@ -32,8 +32,6 @@ function setup() {
 	ground=createSprite(width/2, height-35, width,10);
 	ground.shapeColor=color(255,255,255)
 
-	red2 = new RedSide(600,500);
-	red3 = new RedSide(600,300);
 
 
 
@@ -55,6 +53,9 @@ function setup() {
 	 ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	 World.add(world, ground);
 
+	 red2 = new RedSide(500,600);
+	 red3 = new RedSide(300,600);
+ 
 
 	Engine.run(engine);
   
@@ -63,8 +64,7 @@ function setup() {
 
 function draw() {
 
-
- Engine.update(engine);
+Engine.update(engine);
 
   rectMode(CENTER);
   background(0);
@@ -91,8 +91,3 @@ function keyPressed() {
 	Matter.Body.setStatic(packageBody, false);
   }
 }
-
-
-
-
-
